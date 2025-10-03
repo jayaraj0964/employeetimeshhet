@@ -53,7 +53,7 @@ class UserPositionManagement extends Component {
     this.setState({ loading: true, error: null });
     try {
       const accessToken = localStorage.getItem('accessToken') || 'mock-token';
-      const response = await fetch('http://localhost:8080/api/users', { // Adjust endpoint as per your User controller
+      const response = await fetch('http://localhost:8080/api/users/all', { // Adjust endpoint as per your User controller
         headers: {
           'Authorization': `Bearer ${accessToken}`,
           'Content-Type': 'application/json',
